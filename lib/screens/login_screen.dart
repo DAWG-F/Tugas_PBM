@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Icon
+                
                   Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -93,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 6),
                   const Text(
-                    'Praktikum Pemrograman Berbasis Mobile 2026',
+                    'All You Can Buy',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12,
@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 40),
 
-                  // Card form
+              
                   Container(
                     padding: const EdgeInsets.all(24),
                     decoration: BoxDecoration(
@@ -137,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         const SizedBox(height: 24),
 
-                        // Username
+                      
                         TextFormField(
                           controller: _usernameController,
                           keyboardType: TextInputType.number,
@@ -173,7 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         const SizedBox(height: 16),
 
-                        // Password
+                      
                         TextFormField(
                           controller: _passwordController,
                           obscureText: _obscurePassword,
@@ -220,7 +220,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         const SizedBox(height: 24),
 
-                        // Tombol Login
+                      
                         SizedBox(
                           height: 52,
                           child: ElevatedButton(
