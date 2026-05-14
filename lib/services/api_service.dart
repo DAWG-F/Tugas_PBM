@@ -9,22 +9,22 @@ class ApiService {
   static const _storage = FlutterSecureStorage();
   static const String _tokenKey = 'auth_token';
 
-  // Simpan token
+  
   static Future<void> saveToken(String token) async {
     await _storage.write(key: _tokenKey, value: token);
   }
 
-  // Ambil token
+
   static Future<String?> getToken() async {
     return await _storage.read(key: _tokenKey);
   }
 
-  // Hapus token (logout)
+
   static Future<void> deleteToken() async {
     await _storage.delete(key: _tokenKey);
   }
 
-  // Header dengan Bearer Token
+
   static Future<Map<String, String>> authHeaders() async {
     final token = await getToken();
     return {
@@ -34,7 +34,7 @@ class ApiService {
     };
   }
 
-  // Login
+ 
   static Future<Map<String, dynamic>> login(
     String username,
     String password,
@@ -67,7 +67,7 @@ class ApiService {
     }
   }
 
-  // Ambil daftar produk
+
   static Future<Map<String, dynamic>> getProducts() async {
     final url = Uri.parse('$baseUrl/api/products');
     final response = await http.get(url, headers: await authHeaders());
@@ -82,7 +82,7 @@ class ApiService {
     }
   }
 
-  // Simpan produk
+
   static Future<Map<String, dynamic>> saveProduct({
     required String name,
     required int price,
@@ -109,7 +109,7 @@ class ApiService {
     }
   }
 
-  // Hapus produk
+ 
   static Future<Map<String, dynamic>> deleteProduct(int id) async {
     final url = Uri.parse('$baseUrl/api/products/$id');
     final response = await http.delete(url, headers: await authHeaders());
@@ -122,7 +122,7 @@ class ApiService {
     }
   }
 
-  // Submit tugas
+
   static Future<Map<String, dynamic>> submitTugas({
     required String name,
     required int price,
