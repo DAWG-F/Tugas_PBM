@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 24),
 
                   const Text(
-                    'Katalog Produk',
+                    'DAMNit! Store',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 26,
